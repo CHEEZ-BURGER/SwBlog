@@ -9,11 +9,36 @@
     <!--stylesheet-->
     <link rel="stylesheet" href="./mainPage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!--script-->
     <script src="./mainPage.js"></script>
 </head>
 <body>
-    
+    <div class="main_inner">
+       <div class="header"></div>
+       <div class="headerBtn_box">
+           
+            <div><img onclick="btn_2();" class="scerch_btn" src="./mainPage_img/icon_search.png" alt=""></div>
+            <div class="hamburger_btn">
+                <div onclick="btn_1();" class="btn_body"></div>
+                <div class="up_bar"></div>
+                <div class="down_bar"></div>
+            </div>
+            <img class="logo" src="./mainPage_img/logo_header.png" alt="logo">
+            <div class="header_hidden"></div>
+       </div>
+        
+        <div class="link_box">
+            <div class="blogLog_box"></div>
+            <div class="link_box"></div>
+            <p></p>
+        </div>  
+        <div class="hello_scene">
+            <img class="earth" src="./mainPage_img/flook_earth.png">
+        </div>  
+    </div>
 </body>
 </html>
