@@ -139,6 +139,14 @@ a{
     height: 293px;
     z-index: 14;
 }
+.link_box_main{
+    position: absolute;
+    width: 234px;
+    left: 396px;
+    top: 169px;
+    height: 293px;
+    z-index: 9;
+}
 .blogLog_box{
     position: absolute;
     right: 399px;
@@ -182,6 +190,7 @@ a{
     position: absolute;
     z-index: 10;
 }
+
 .content_box{
     width: 354px;
     height: 254px;
@@ -322,4 +331,55 @@ a{
     font-family: 'Noto Sans KR', sans-serif;
     color: rgb(71, 71, 71);
     margin-top: 10px;
+}
+.main_cont_back{
+    width: auto;
+    height: 1700px;
+    background-color: #FEFEFE;
+    /*background-color: #FEFEFE;*/
+    position: relative;
+    top: 805px;
+}
+.more_box{
+    width: 189px;
+    height: 93px;
+    position: relative;
+    top: 66px;
+}
+.more_box a{
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #434343;
+}
+.more_box p{
+    font-size: 19px;
+    font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #434343;
+}
+.arrow_right{
+    position: absolute;
+    bottom: 28px;
+    left: 174px;
+}
+.main_line{
+    width: auto;
+    height: 143px;
+    background-color: #F8F8F8;
+    position: relative;
+    top: 160px;
+}
+.main_box_flexbox{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 36px;    
+}
+.main_box {
+    position: relative;
+    width: 354px;
+    height: 293px;
+    z-index: 5;
+    top: -55px;
 }
