@@ -9,6 +9,7 @@
 body{
     height: 3000px;
     overflow-x: hidden;
+    
 }
 img {
     display: block;
@@ -29,7 +30,7 @@ a{
     width: 100%;
     height: 60px;
     border: 0.8px solid #c6c6c693;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     transition: .4s;
     z-index: 8;
 }
@@ -186,7 +187,7 @@ a{
     width: 354px;
     height: 254px;
     border-radius: 40px;
-    backdrop-filter: blur(20px) brightness(40%);
+    backdrop-filter: blur(5px) brightness(60%);
     position: absolute;
     z-index: 10;
 }
@@ -198,7 +199,7 @@ a{
     position: absolute;
     z-index: 9;
     top: 0;
-    background-image: url(./mainPage_img/fddsfsd.JPG);
+    background-image: url("../mainPage_img/fddsfsd.JPG");
     background-size: cover;
     box-shadow: 10px 20px 46px rgba(0, 0, 0, 0.335);
 }
@@ -235,7 +236,7 @@ a{
     border: 1px solid #7070701c;
     border-style: none none solid none;
     z-index: -1;
-    background-image: url(./mainPage_img/flook_earth.png);
+    background-image: url(../mainPage_img/flook_earth.png);
     background-repeat: no-repeat;
     background-position-x: 4049px;
     background-position-y: 10px;
@@ -280,7 +281,7 @@ a{
     margin-top: 120px;
 }
 .recent_scene{
-    background-image: url("./mainPage_img/recent_bg.png");
+    background-image: url("../mainPage_img/recent_bg.png");
     background-size: contain;
     width: 8000px;
     height: 339px;
@@ -382,4 +383,15 @@ a{
     height: 293px;
     z-index: 5;
     top: -55px;
+    transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.main_box:hover {
+    transform: scale(1.05);
+}
+.footer{
+    width: auto;
+    height: 353px;
+    position: relative;
+    top: 850px;
+    background-color: #F5F5F7;
 }
