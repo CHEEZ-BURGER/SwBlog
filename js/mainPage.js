@@ -15,6 +15,8 @@ function btn_1() {
 }
 function btn_2() {
   let scerchIcon = document.querySelector(".scerch_btn");
+  let hello_scene = document.querySelector(".hello_scene");
 
   scerchIcon.classList.toggle("active");
+  hello_scene.classList.toggle("left");
 }

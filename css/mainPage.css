@@ -26,8 +26,8 @@ a{
 .header{
     left: 50%;
     transform: translateX(-50%);
-    position: fixed;
-    width: 100%;
+    position: absolute;
+    width: 8000px;
     height: 60px;
     border: 0.8px solid #c6c6c693;
     backdrop-filter: blur(10px);
@@ -40,7 +40,7 @@ a{
 .logo{
     width: 56px;
     height: 56px;
-    position: fixed;
+    position: absolute;
     z-index: 10;
     left: 50%;
     transform: translateX(-50%);
@@ -72,7 +72,7 @@ a{
 .headerBtn_box{
     width: 1120px;
     margin:  0 auto;
-    position: fixed;
+    position: absolute;
     height: 100px;
     z-index: 10;
 }
@@ -118,7 +118,7 @@ a{
     top: 12px;
 }
 .header_hidden{
-    position: fixed;
+    position: absolute;
     width: 1920px;
     height: 563px;
     z-index: 8;
@@ -187,7 +187,7 @@ a{
     width: 354px;
     height: 254px;
     border-radius: 40px;
-    backdrop-filter: blur(5px) brightness(60%);
+    backdrop-filter: brightness(40%) blur(5px);
     position: absolute;
     z-index: 10;
 }
@@ -203,6 +203,7 @@ a{
     background-size: cover;
     box-shadow: 10px 20px 46px rgba(0, 0, 0, 0.335);
 }
+
 .content_box_text{
     z-index: 11;
     position: absolute;
@@ -242,6 +243,9 @@ a{
     background-position-y: 10px;
     position: absolute;
     transition: .4s;
+}
+.hello_scene.left{
+    transform: translateX(-54%);
 }
 .hello_scene.active{
     left: 50%;
@@ -358,6 +362,7 @@ a{
     font-weight: 300;
     font-family: 'Noto Sans KR', sans-serif;
     color: #434343;
+    margin-top: 5px;
 }
 .arrow_right{
     position: absolute;
@@ -386,7 +391,8 @@ a{
     transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .main_box:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) translateY(-10px);
+    filter: drop-shadow(6px 6px 36px rgba(0, 0, 0, 0.164));
 }
 .footer{
     width: auto;
@@ -394,4 +400,54 @@ a{
     position: relative;
     top: 850px;
     background-color: #F5F5F7;
+}
+.dot_des{
+    width: 148px;
+    height: 82px;
+    position: absolute;
+    right: 0;
+    top: 73px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+.dot_des p{
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 3px;
+}
+.s_line {
+    width: auto;
+    height: 2px;
+    background-image: url(../mainPage_img/dash_line.png);
+    position: relative;
+    top: 420px;
+    opacity: .6;
+}
+.content_text{
+    width: auto;
+    height: 51px;
+    margin-top: 260px;
+    display: flex;
+}
+.content_text .des{
+    width: 270px;
+    height: 51px;
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #434343;
+    font-size: 20px;
+    font-weight: 500;
+}
+.content_text .year{
+    width: 90px;
+    height: 24px;
+    position: absolute;
+    bottom: -17px;
+    right: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: right;
 }
