@@ -76,12 +76,16 @@ a{
     height: 100px;
     z-index: 10;
 }
+.hamburger_btn:hover{
+    transform: scale(1.1);
+}
 .hamburger_btn{
     position: absolute;
     width: 28px;
     height: 28px; 
     top: 17px;
     left: 0;
+    transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .btn_body{
     position: relative;
@@ -155,6 +159,11 @@ a{
     width: 354px;
     height: 293px;
     z-index: 14;
+    transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.blogLog_box:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(6px 6px 36px rgba(0, 0, 0, 0.164));
 }
 .header_hidden .harmony {
     position: absolute;
@@ -182,6 +191,13 @@ a{
     font-family: 'Noto Sans KR', sans-serif;
     color: #38A9FF;
     top: 15px;
+    transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.link_baro:hover{
+    transform: scale(1.05);
+    color: #0492ff;
+    font-size: 17px;
+    font-weight: 300;
 }
 .content_box_blur{
     width: 354px;
@@ -317,6 +333,11 @@ a{
     width: 354px;
     height: 293px;
     z-index: 14;
+    transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.blogLog_box_recent:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(6px 6px 36px rgba(0, 0, 0, 0.164));
 }
 .recent_text h1{
     font-size: 48px;
@@ -393,6 +414,7 @@ a{
 .main_box:hover {
     transform: scale(1.05) translateY(-10px);
     filter: drop-shadow(6px 6px 36px rgba(0, 0, 0, 0.164));
+    font-weight: 300;
 }
 .footer{
     width: auto;
@@ -422,7 +444,7 @@ a{
     height: 2px;
     background-image: url(../mainPage_img/dash_line.png);
     position: relative;
-    top: 420px;
+    top: 435px;
     opacity: .6;
 }
 .content_text{
