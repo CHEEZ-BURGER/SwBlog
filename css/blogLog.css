@@ -21,15 +21,6 @@ a{
     margin:  0 auto;
     position: relative;
 }
-
-.main_back_blur{
-    position: absolute;
-    width: auto;
-    height: 603px;
-    backdrop-filter: blur(4px) brightness(101%);
-    z-index: 2;
-    width: 100%;
-}
 .nfixed_back{
     border-top: 1px solid rgba(128, 128, 128, 0.513);
     width: auto;
@@ -38,18 +29,28 @@ a{
     position: relative;
     top: 597px;
     z-index: 4;
-    background-image: url(../catPage_common/cat_egg_bg.png);
-    background-position-y: -150px;
 }
 .cat_name {
     position: fixed;
     color: rgb(51, 51, 51);
     font-size: 50px;
     font-weight: 600;
-    top: 280px;
+    top: 250px;
     font-family: 'Noto Sans KR', sans-serif;
     z-index: 3;
     left: 50%;
+    transform: translateX(-50%);
+}
+.cat_desc {
+    position: fixed;
+    color: rgb(63, 63, 63);
+    font-size: 18px;
+    font-weight: 300;
+    top: 320px;
+    font-family: 'Noto Sans KR', sans-serif;
+    z-index: 3;
+    left: 50%;
+    text-align: center;
     transform: translateX(-50%);
 }
 .header {
@@ -114,69 +115,51 @@ a{
     letter-spacing : 5px;
     font-weight: 700;
 }
-.main_back_img{
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    width: 3000px;
-    height: 600px;
-}
-.box_inner{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+.main_inner{
     width: 1121px;
-    margin-top: 137px;
 }
-.box_flexbox{
-    display: flex;
-    gap: 50px;
-    margin-top: 50px;
-}
-.box_blur h1{
+.main_inner h1{
+    color: rgb(34, 34, 34);
+    font-size: 35px;
+    font-weight: 500;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 70px;
-    font-weight: 600;
-    color: #FFF;
-    margin-left: 60px;
-    margin-top: 56px;
 }
-.box_blur p{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 20px;
+.main_inner h2{
+    color: rgb(34, 34, 34);
+    font-size: 19px;
     font-weight: 400;
-    color: #FFF;
-    margin-left: 60px;
-    margin-top: 32px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
-.box_blur .year{
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+.main_inner p{
+    color: rgb(34, 34, 34);
+    font-size: 18px;
     font-weight: 300;
-    color: #FFF;
-    margin-left: 60px;
-    top: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 21px;
 }
-.box_blur{
-    width: 536px;
-    height: 363px;
-    
-    border-radius: 50px; 
-    z-index: 6;
-    cursor: pointer;
-    transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+.main_inner ul {
+    list-style: square inside;
+    list-style-image: url(../b_log_img/list_b.png);
 }
-.box_blur:hover{
-    box-shadow: 10px 20px 46px rgba(0, 0, 0, 0.486);
+.main_inner li {
+    margin-top: 6px;
+    margin-left: 20px;
 }
-.box_img{
-    filter: brightness(40%);
-    position: absolute;
-    background-image: url(../mainPage_img/fddsfsd.JPG);
-    width: 536px;
-    height: 363px;
-    border-radius: 50px;
-    z-index: 5;
-    box-shadow: 10px 20px 46px rgba(0, 0, 0, 0.335);
+.big{
+    width: 100%;
+    height: 567px;
+}
+.side_l{
+    width: 560px;
+    height: 300px;
+}
+.side_r{
+    width: 560px;
+    height: 300px;
+    position: relative;
+    left: 561px;
+}
+.mini{
+    width: 270px;
+    height: 175px;
 }
