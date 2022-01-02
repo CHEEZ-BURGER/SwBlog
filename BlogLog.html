@@ -23,20 +23,40 @@
         </div>
         <div class="nfixed_back">
             <div class="main_inner">
-                <h1>제목입니다</h1>
-                <h2>부제목입니다</h2>
-                <p>본문입니다<br>본문입니다<br>본문입니다<br>본문입니다</p>
-
+                <h1 id="margin_100px">시작</h1>
+                <h2>제작로그를 만든이유</h2>
+                <p>이 블로그는 네이버블로그,티스토리 등의 서비스형 블로그와 달리<br>
+                제가 직접 만들었기 때문에 당연하게도 여러가지 문제들과 마주쳤습니다,<br>
+                블로그 제작로그를 작성함으로서 마주친 문제들에 대한 오답노트가 만들어지게되고<br>
+                따라서 같은 실수를 반복하지 않을것을 기대할 수 있습니다.
+                </p>
+                <h1 id="margin_50px">블로그를 직접 만든 이유💻</h1>
+                <p>인터넷에 블로그 만들기를 검색하면 여러가지 블로그 서비스가 있습니다<br>
+                하지만 제가 굳이 블로그사이트를 직접 만든 이유는...
                 <ul>
-                    <li>리스트입니다0</li>
-                    <li>리스트입니다1</li>
-                    <li>리스트입니다2</li> 
+                    <li>원하는 기능들을 내마음대로 넣을수있다.</li>
+                    <li>코딩연습을 할 수 있다<span style="font-size: 10px;opacity: .7;">(중요)</span>.</li>
+                    <li>블로그 운영경험을 해볼수 있다.</li>
                 </ul>
-                
-                <img class="big" src="./mainPage_img/fddsfsd.JPG"> 
-                <img class="side_l" src="./mainPage_img/fddsfsd.JPG"> 
-                <img class="side_r" src="./mainPage_img/fddsfsd.JPG"> 
-                <img class="mini" src="./mainPage_img/fddsfsd.JPG"> 
+                입니다.</p>
+                <h1 id="margin_100px">최적화 할수 있을까?</h1>
+                <h2>백드롭필터</h2>
+                <p>사이트의 메인페이지와 카테고리별 글 선택페이지에는<br>
+                모서리가 둥근 링크박스가 있습니다, 이박스들에는 블러효과가 적용되어 있습니다<br>
+                그런데 메인페이지의 박스들과는 다르게 카테고리별 글 선택페이지의 박스들은<br>
+                블러처리범위가 넓어서 그런지 성능에 큰 악영향을 미치는것을 발견했습니다.<br>
+                <img src="./mainPage_img/fddsfsd.JPG" class="side_l" alt="박스구조 사진">
+                카테고리 페이지의 박스는 맨 하단의 img_box, 블러처리 역할의 blur_box, 최상단의 text_box<br>
+                로 이루어져 있는데요, 중간의 blur_box의 backdrop-filter가 이 문제의 범인인것을 확인했습니다.
+                </p>
+                <h2 id="margin_50px">해결</h2>
+                <img src="./mainPage_img/fddsfsd.JPG" class="side_l" alt="수정한 박스구조 사진">
+                <p>이 문제를 해결한 방법은 blur_box의 backdrop-filter대신<br>
+                    img_box에다가 filter를 적용하여 이미지를 블러처리하고<br>
+                    삐져나온 img_box를 blur_box의 overflow: hidden 으로 잘라내어<br>
+                    성능에 끼치는 영향은 줄이고 모양새는 큰 차이가 없게 만들었습니다
+                </p>
+
             </div>
         </div>
 
@@ -48,7 +68,7 @@
                     <a href="./index.html">돌아가기</a>
                 </div>
                 <div class="cat_btn_box">
-                    <a href="#">CODING</a>
+                    <a href="./cat_cod.html">CODING</a>
                     <a href="#">DESIGN</a>
                     <a href="#">TECH</a>
                 </div>
