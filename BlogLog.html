@@ -25,10 +25,10 @@
             <div class="main_inner">
                 <h1 id="margin_100px">시작</h1>
                 <h2>제작로그를 만든이유</h2>
-                <p>이 블로그는 네이버블로그,티스토리 등의 서비스형 블로그와 달리<br>
-                제가 직접 만들었기 때문에 당연하게도 여러가지 문제들과 마주쳤습니다,<br>
-                블로그 제작로그를 작성함으로서 마주친 문제들에 대한 오답노트가 만들어지게되고<br>
-                따라서 같은 실수를 반복하지 않을것을 기대할 수 있습니다.
+                <p>이 블로그는 네이버 블로그, 티스토리 등의 서비스형 블로그와 달리<br>
+                제가 직접 만들었기 때문에 당연하게도 여러 가지 문제들과 마주쳤습니다,<br>
+                블로그 제작 로그를 작성함으로써 마주친 문제들에 대한 오답 노트가 만들어지게 되고<br>
+                따라서 같은 실수를 반복하지 않을 것을 기대할 수 있습니다.
                 </p>
                 <h1 id="margin_50px">블로그를 직접 만든 이유💻</h1>
                 <p>인터넷에 블로그 만들기를 검색하면 여러가지 블로그 서비스가 있습니다<br>
@@ -36,27 +36,32 @@
                 <ul>
                     <li>원하는 기능들을 내마음대로 넣을수있다.</li>
                     <li>코딩연습을 할 수 있다<span style="font-size: 10px;opacity: .7;">(중요)</span>.</li>
-                    <li>블로그 운영경험을 해볼수 있다.</li>
+                    <li>블로그서비스 운영경험을 해볼수 있다.</li>
                 </ul>
-                입니다.</p>
-                <h1 id="margin_100px">최적화 할수 있을까?</h1>
+                등이 있겠습니다.</p>
+                <h1 id="margin_100px">최적화 할 수 있을까?</h1>
                 <h2>백드롭필터</h2>
                 <p>사이트의 메인페이지와 카테고리별 글 선택페이지에는<br>
-                모서리가 둥근 링크박스가 있습니다, 이박스들에는 블러효과가 적용되어 있습니다<br>
+                모서리가 둥근 링크 박스가 있습니다, 이박스들에는 블러 효과가 적용되어 있습니다<br>
                 그런데 메인페이지의 박스들과는 다르게 카테고리별 글 선택페이지의 박스들은<br>
-                블러처리범위가 넓어서 그런지 성능에 큰 악영향을 미치는것을 발견했습니다.<br>
-                <img src="./mainPage_img/fddsfsd.JPG" class="side_l" alt="박스구조 사진">
-                카테고리 페이지의 박스는 맨 하단의 img_box, 블러처리 역할의 blur_box, 최상단의 text_box<br>
-                로 이루어져 있는데요, 중간의 blur_box의 backdrop-filter가 이 문제의 범인인것을 확인했습니다.
+                블러처리 범위가 넓어서 그런지 <span class="high">성능에 큰 악영향을</span> 미치는 것을 발견했습니다.<br>
+                <img src="./b_log_img/ex_01.png" class="side_l" alt="박스구조 사진">
+                카테고리 페이지의 박스는 맨 하단의 <span class="bold">img_box</span>, 블러 처리 역할의 <span class="bold">blur_box</span>, 최상단의 <span class="bold">text_box</span><br>
+                로 이루어져 있는데요, 중간의 <span class="high">blur_box의 backdrop-filter</span>가 이 문제의 범인인것을 확인했습니다.
                 </p>
                 <h2 id="margin_50px">해결</h2>
-                <img src="./mainPage_img/fddsfsd.JPG" class="side_l" alt="수정한 박스구조 사진">
+                <img src="./b_log_img/ex_02.png" class="side_l" alt="수정한 박스구조 사진">
                 <p>이 문제를 해결한 방법은 blur_box의 backdrop-filter대신<br>
-                    img_box에다가 filter를 적용하여 이미지를 블러처리하고<br>
-                    삐져나온 img_box를 blur_box의 overflow: hidden 으로 잘라내어<br>
-                    성능에 끼치는 영향은 줄이고 모양새는 큰 차이가 없게 만들었습니다
+                    img_box에다가 <span class="bold">filter</span>를 적용하여 이미지를 블러처리하고<br>
+                    삐져나온 img_box를 blur_box의 <span class="bold">overflow: hidden</span> 으로 잘라내어<br>
+                    성능에 끼치는 영향은 줄이고 <span class="high">모양새는 큰 차이가 없게</span> 만들었습니다.
                 </p>
-
+                <h2 id="margin_50px">수정전 HTML코드</h2>
+                <div class="colorscripter-code" style="margin: 20px 0 20px 0; color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">a</span>&nbsp;<span style="color:#0a9989">href</span>=<span style="color:#df5000">"#"</span><span style="color:#0a9989"></span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"box_blur"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">h1</span><span style="color:#010101">&gt;</span>웹코딩<span style="color:#010101">&lt;</span><span style="color:#066de2">br</span><span style="color:#010101">&gt;</span>시작하기<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">h1</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">p</span><span style="color:#010101">&gt;</span>이곳에다가<span style="color:#010101">&lt;</span><span style="color:#066de2">br</span><span style="color:#010101">&gt;</span>2줄정도의&nbsp;짧은&nbsp;설명&nbsp;들어감.<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">p</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">time</span>&nbsp;<span style="color:#0a9989">datetime</span>=<span style="color:#df5000">"2021-12-21T00:00:00.000Z"</span><span style="color:#0a9989"></span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"year"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>2021-12-21<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">time</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">a</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">div</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"box_img"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">div</span><span style="color:#010101">&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#e5e5e5"></a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <p>img_box 가 blur_box 밖에서 백드롭필터의 영향을 받습니다.</p>
+                <h2 id="margin_50px">수정후 HTML코드</h2>
+                <div class="colorscripter-code" style="margin: 20px 0 20px 0; color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">a</span>&nbsp;<span style="color:#0a9989">href</span>=<span style="color:#df5000">"#"</span><span style="color:#0a9989"></span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"box_blur"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">h1</span><span style="color:#010101">&gt;</span>웹코딩<span style="color:#010101">&lt;</span><span style="color:#066de2">br</span><span style="color:#010101">&gt;</span>시작하기<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">h1</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">p</span><span style="color:#010101">&gt;</span>이곳에다가<span style="color:#010101">&lt;</span><span style="color:#066de2">br</span><span style="color:#010101">&gt;</span>2줄정도의&nbsp;짧은&nbsp;설명&nbsp;들어감.<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">p</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">time</span>&nbsp;<span style="color:#0a9989">datetime</span>=<span style="color:#df5000">"2021-12-21T00:00:00.000Z"</span><span style="color:#0a9989"></span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"year"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>2021-12-21<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">time</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">div</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"box_img"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">a</span><span style="color:#010101">&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#e5e5e5"></a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <p>img_box 가 blur_box 안에서 overflow: hidden 에 의해 blur_box의 모양으로 잘립니다.</p>
             </div>
         </div>
 
