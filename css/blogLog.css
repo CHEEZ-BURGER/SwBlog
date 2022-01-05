@@ -141,7 +141,7 @@ a{
     font-size: 18px;
     font-weight: 300;
     font-family: 'Noto Sans KR', sans-serif;
-    line-height: 21px;
+    line-height: 28px;
     margin-top: 15px;
 }
 .main_inner ul {
@@ -152,6 +152,7 @@ a{
 .main_inner li {
     margin-top: 6px;
     margin-left: 20px;
+    line-height: 17px;
 }
 .big{
     width: 100%;
