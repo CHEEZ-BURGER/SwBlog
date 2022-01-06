@@ -21,14 +21,21 @@ function btn_2() {
   hello_scene.classList.toggle("left");
 }
 function dark() {
-  var sections = document.querySelectorAll(".des, .dark_call, .hello_p, .year, .more_btn, .more_box_p, .main_line, .arrow_right, body, h1, h2, .recent_text h3, .logo, .scerch_btn, .harmony, .recent_scene, .moon, .sun_blue, .sun_black, p, .hello_scene, .main_cont_back, .footer, .up_bar, .line, .hello_content_box p, .header"); 
+  var sections = document.querySelectorAll(".des, html, .content_box_blur, .dark_call, .hello_p, .year, .more_btn, .more_box_p, .main_line, .arrow_right, body, h1, h2, .recent_text h3, .logo, .scerch_btn, .harmony, .recent_scene, .moon, .sun_blue, .sun_black, p, .hello_scene, .main_cont_back, .footer, .up_bar, .line, .hello_content_box p, .header"); 
   for( var i = 0; i < sections.length; i++ ){
     var item = sections.item(i); 
     item.classList.toggle("dark");
   }
 }
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  console.log("DarkMode_prefer!")
-  
+
+
+function isSameAsLocation(uriString) {
+  const uri = new URL(uriString);
+
+  return (
+      uri.origin === window.location.origin &&
+      uri.pathname === window.location.pathname
+  );
 }
+
 

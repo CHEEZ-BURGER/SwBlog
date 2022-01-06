@@ -10,11 +10,26 @@ body{
     overflow-x: hidden;
     height: auto;
 }
+body.dark{
+    background-color: #181818;
+}
 img {
     display: block;
 }
 a{
     text-decoration: none;
+}
+h1.dark{
+    color: rgb(228, 228, 228);
+}
+h2.dark{
+    color: rgb(228, 228, 228);
+}
+a{
+    color: rgb(228, 228, 228);
+}
+p.dark{
+    color: rgb(228, 228, 228);
 }
 .main_inner {
     width: 1120px;
@@ -29,6 +44,9 @@ a{
     position: relative;
     top: 597px;
     z-index: 4;
+}
+.nfixed_back.dark{
+    background-color: #202020;
 }
 .cat_name {
     position: fixed;
@@ -67,6 +85,7 @@ a{
 }
 .header.dark {
     border: 1px solid #353535;
+    background-color: rgba(39, 39, 39, 0.657);
 }
 .header_logo{
     left: 50%;
@@ -74,10 +93,16 @@ a{
     z-index: 10;
     position: relative;
 }
+.header_logo.dark{
+    filter: invert(110%); 
+}
 .back_btn img{
     position: absolute;
     transform: scaleX(-1);
     top: 14px;
+}
+.back_btn img.dark{
+    filter: invert(110%); 
 }
 .back_btn a{
     font-size: 23px;
@@ -120,6 +145,10 @@ a{
 }
 .main_inner{
     width: 1121px;
+}
+.main_inner.dark{
+    width: 1121px;
+    color: rgb(228, 228, 228);
 }
 .main_inner h1{
     color: rgb(34, 34, 34);
@@ -200,4 +229,25 @@ a{
 }
 .bold{
     font-weight: 500;
+}
+.high.dark{
+    color: rgb(228, 228, 228);
+}
+.bold.dark{
+    color: rgb(228, 228, 228);
+}
+.main_inner h1.dark{
+    color: rgb(228, 228, 228);
+}
+.main_inner h2.dark{
+    color: rgb(228, 228, 228);
+}
+.main_inner p.dark{
+    color: rgb(228, 228, 228);
+}
+.main_inner ul.dark {
+    color: rgb(228, 228, 228);
+}
+.main_inner li.dark {
+    color: rgb(228, 228, 228);
 }
