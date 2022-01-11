@@ -263,31 +263,20 @@
         </div>
         
     </div>
+    <div class="pg_lode_box1"></div>
+    <div class="pg_lode_box2"></div>
+    
+    
+
     <script>
-        document.body.classList.add("reveal");
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         console.log("DarkMode_prefer!")
-        var sections = document.querySelectorAll(".des, html, .content_box_blur, .dark_call, .hello_p, .year, .more_btn, .more_box_p, .main_line, .arrow_right, body, h1, h2, .recent_text h3, .logo, .scerch_btn, .harmony, .recent_scene, .moon, .sun_blue, .sun_black, p, .hello_scene, .main_cont_back, .footer, .up_bar, .line, .hello_content_box p, .header"); 
+        var sections = document.querySelectorAll(".des, .pg_lode_box1, .pg_lode_box2, html, .content_box_blur, .dark_call, .hello_p, .year, .more_btn, .more_box_p, .main_line, .arrow_right, body, h1, h2, .recent_text h3, .logo, .scerch_btn, .harmony, .recent_scene, .moon, .sun_blue, .sun_black, p, .hello_scene, .main_cont_back, .footer, .up_bar, .line, .hello_content_box p, .header"); 
         for( var i = 0; i < sections.length; i++ ){
             var item = sections.item(i); 
             item.classList.toggle("dark");
           }
         }
-
-        jQuery(function($) {
-        $("body").css("display", "none");
-        $("body").fadeIn(2000);
-        $("a.transition").click(function(event){
-        event.preventDefault();
-        linkLocation = this.href;
-        $("body").fadeOut(1000, redirectPage);
-        });
-        function redirectPage() {
-        window.location = linkLocation;
-        }
-        });
-
-
 
     </script>
 </body>
