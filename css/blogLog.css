@@ -9,6 +9,8 @@
 body{
     overflow-x: hidden;
     height: auto;
+    animation: load 0.3s ease-out;
+    animation-fill-mode : forwards;
 }
 body.dark{
     background-color: #181818;
@@ -223,6 +225,9 @@ p.dark{
 #margin_50px{
     margin-top: 50px;
 }
+#margin_20px{
+    margin-top: 20px;
+}
 .high{
     box-shadow: inset 0 -7px 0 #0080ff83;
     line-height: 21px;
@@ -250,4 +255,22 @@ p.dark{
 }
 .main_inner li.dark {
     color: rgb(228, 228, 228);
+}
+#blue{
+    color: #0080FF;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.gongback{
+    width: 10px;
+    height: 300px;
+}
+@keyframes load{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
