@@ -7,6 +7,24 @@
     font-family: 'Poppins', sans-serif;
     transition: .3s;
 }
+::-webkit-scrollbar{
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #474747;
+  }
+  ::-webkit-scrollbar-track:hover{
+    background: #474c52;
+    width: 20px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background-color: #5AA7F8;
+    border-radius: 5px;
+  }
 body{
     overflow-x: hidden;
     height: auto;
@@ -176,11 +194,10 @@ p.dark{
 }
 .main_inner h2{
     color: rgb(34, 34, 34);
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 400;
     font-family: 'Noto Sans KR', sans-serif;
     margin-top: 5px;
-    color: #333;
 }
 .main_inner p{
     color: rgb(34, 34, 34);
