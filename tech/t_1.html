@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tech_1</title>
+
+<!--stylesheet-->
+    <link rel="stylesheet" href="../css/blogLog.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+<!--js-->
+<script src="../BlogLog.js"></script>
+</head>
+    <body>
+        <p class="cat_name">버튼박스 만들기 여정⚡</p>  
+        <p class="cat_desc">휴대용 버튼을 만들어봅시다</p>
+        <div class="fixed">
+            <img class="main_back_img" src="">
+        </div>
+        <div class="nfixed_back">
+            <div class="main_inner">
+                
+                <h1 id="margin_100px">시작</h1>
+                <h2>뭘 만들어볼까?</h2>
+                <p><span class="bold">SW 블로그</span>의 첫번째 글입니다<br>
+                이런 기념비적인 글에는 역시 제가 가장 좋아하는<br>
+                <span class="high">쓸모없는것</span>을 만드는걸 기록해야겠다 결심했습니다</p>
+                <hr id="margin_50px">
+                <h1 id="margin_100px">기능</h1>
+                <h2>2022-02-24</h2>
+                <p>제가 만드려는 "버튼 박스" 의 기능을<br>
+                간단히 정리했습니다.</p>
+                <div class="side_box">
+                    <img class="side_l" src="./t_1_img/t_ex_01.png" alt="t_ex_01">
+                    <p><span class="bold">"버튼박스"</span>의 형태는 이름 그대로<br>
+                    <span class="high">박스위에 버튼</span>이 달려있는 간단한 형태로 만들것입니다,<br>
+                    너무 심심하진 않게 측면에 로고를 추가했습니다.</p>
+                </div>
+                <div class="side_box">
+                    <img id="hid" class="side_l" src="./t_1_img/t_ex_02.png" alt="t_ex_02">
+                    <p>버튼을 누르면 버튼에 <span class="bold">라이트가 켜질것</span>입니다<br>
+                    아케이드 게임기에 달려있는 <span class="high">아케이드 버튼</span>을 사용하기 때문에<br>
+                    편하게 만들수 있을거라 생각합니다.</p>
+                    <img id="vie" class="side_l" src="./t_1_img/t_ex_02.png" alt="t_ex_02">
+            </div>
+                <div class="side_box">
+                    <img class="side_l" src="./t_1_img/t_ex_03.png" alt="t_ex_03">
+                    <p>버튼을 누를때 <span class="bold">라이트가 켜지는</span> 상황에서<br>
+                    버튼을 눌렀을때 <span class="high">진동 효과</span>를 추가하여 쾌감을 <br>
+                    느낄수 있게 만들것입니다.</p>
+                </div>
+                
+                
+                <div class="gongback"></div>
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="main_inner">
+                <img class="header_logo" src="../b_log_img/logo_header.png" alt="SwLogo">
+                <div class="back_btn">
+                    <img src="../b_log_img/arrow_right.png">
+                    <a href="../index.html">돌아가기</a>
+                        <div onclick="toggle();" class="dark_box">
+                            <div class="sun_blue"></div>
+                            <div class="sun_black"></div>
+                            <div class="moon"></div>
+                        </div>
+                    </div>
+                <div class="cat_btn_box">
+                    <a href="../cat_cod.html">CODING</a>
+                    <a href="#">DESIGN</a>
+                    <a href="#">TECH</a>
+                </div>
+                
+            </div>
+        </div>
+        <script>
+            document.body.classList.add("reveal");
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            console.log("DarkMode_prefer!")
+            var sections = document.querySelectorAll(".nfixed_back,-webkit-scrollbar-track,.moon,.sun_blue,.sun_black, .cat_btn_box a, .back_btn a, .content_box_blur, .main_inner, .hello_p, .bold, .high, .more_box_p, .main_inner h1, .arrow_right, body, h1, h2, .recent_text h3, .logo, .scerch_btn, .main_inner h2, .header_logo, .main_inner h2, .main_inner p, .main_inner li, p, .main_inner ul, .main_cont_back, .footer, .back_btn img, .line, .hello_content_box p, .header"); 
+            for( var i = 0; i < sections.length; i++ ){
+                var item = sections.item(i); 
+                item.classList.toggle("dark");
+              }
+            }
+        </script>
+    </body>
+</html>
