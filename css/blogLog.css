@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 *{
     color: #333;
     font-size: 16px;
@@ -667,4 +670,72 @@ p.dark{
     .cat_desc.dark {
         white-space:nowrap;
     }
+}
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    background-color:#FBFBFB;
+    border-left: solid 1px #BEBEBE;
+    position: sticky;
+    float: right;
+    top: 50px;
+    z-index: 8;
+    color: #181818;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.s_title{
+    width: 300px;
+    height: 180px;
+    background-color:#FBFBFB;
+    border-top : solid 1px #BEBEBE;
+    z-index: 9;
+}
+.s_list{
+    width: 300px;
+    height: 600px;
+    background-color:#FBFBFB;
+    border-top: solid 1px #BEBEBE;
+    border-bottom : solid 1px #BEBEBE;
+    z-index: 10;
+}
+.sidebar h1{
+    font-size: 30px;
+    font-weight: 1000;
+    margin-left: 20px;
+}
+
+.sidebar a{
+    font-size: 21px;
+    font-weight: 400;
+    margin-top: 32px;
+    margin-left: 20px;
+    color: #181818;
+    display: block;
+}
+.sidebar h2{
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 60px;
+}
+.s_list_graph{
+    width: 60px;
+    height: 600px;
+    position: absolute;
+    right: 0;
+}
+.graph_line{
+    width: 2px;
+    border-left: solid 2px #61AAF8;
+    transform: translateY(73px);
+    margin-left: 5px;
+}
+.s_list_graph img:nth-child(1){
+    margin-top: 70px;
+    
+}
+.s_list_graph img{
+    margin-top: 41.6px;
+    z-index: 100;
+    transform: translateY(-200px);
 }
